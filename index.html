@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Developer のポートフォリオ。学習記録と制作したプロジェクトを紹介します。">
+  <title>RYO.DEV | Student Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="RYO.DEV ホーム"><span class="logo-mark">R</span> RYO<span class="accent">.DEV</span></a>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#log">DEV LOG</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> STUDENT DEVELOPER <span class="eyebrow-line"></span> PORTFOLIO 2026</p>
+        <h1>Ideas into<br><span class="accent">REALITY.</span></h1>
+        <p class="hero-lead">学びながら、考えながら、形にする。</p>
+        <p class="hero-description">プログラミングやものづくりに挑戦中。<br>試行錯誤の記録と、作ったものをまとめています。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">作品を見る <span>↘</span></a>
+          <a class="button button-ghost" href="#about">自分について <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" aria-label="装飾的なコードパネル">
+        <div class="visual-top"><span>● ● ●</span><span>profile.js</span><span>001</span></div>
+        <pre><code><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Ryo"</span>,
+  role: <span class="code-green">"Student"</span>,
+  interests: [
+    <span class="code-green">"Programming"</span>,
+    <span class="code-green">"AI"</span>,
+    <span class="code-green">"Creative"</span>
+  ],
+  mindset: <span class="code-green">"Keep learning"</span>
+};</code></pre>
+        <div class="visual-footer"><span class="status-dot"></span> CURRENTLY LEARNING <span class="accent">●</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 05</span></div>
+    </section>
+
+    <section class="section-wrap section-block" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 — ABOUT</p><h2>はじめまして<span class="accent">.</span></h2></div>
+      <div class="about-grid">
+        <div class="about-main panel reveal">
+          <p class="big-copy">興味を持ったことを、<br><span class="accent">自分の手で作ってみる。</span></p>
+          <p>学校でプログラミングを学びながら、少しずつ制作に挑戦しています。まだ勉強中のことも多いですが、分からないことを調べ、試して、改善していく過程を大切にしています。</p>
+          <p class="small-note">※ここは自分の言葉に合わせて書き換えてください。</p>
+        </div>
+        <div class="about-side reveal">
+          <div class="mini-panel"><span class="mini-label">INTERESTS</span><p>Programming / AI / Games</p></div>
+          <div class="mini-panel"><span class="mini-label">GOAL</span><p>IT分野で活躍できる力を身につける</p></div>
+          <div class="mini-panel"><span class="mini-label">APPROACH</span><p>Learn → Build → Improve</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="skills">
+      <div class="section-heading reveal"><p class="eyebrow">02 — SKILLS</p><h2>学んでいる技術<span class="accent">.</span></h2><p class="section-intro">できることを正確に伝えるため、経験の段階も分けて紹介します。</p></div>
+      <div class="skills-grid">
+        <article class="skill-card panel reveal"><span class="skill-number">01</span><div class="skill-icon">⌘</div><h3>HTML / CSS</h3><p>Webページの構造とデザインを学習中。</p><span class="skill-level">LEARNING</span></article>
+        <article class="skill-card panel reveal"><span class="skill-number">02</span><div class="skill-icon">{" }"}</div><h3>JavaScript</h3><p>Webページに動きや操作を加える技術。</p><span class="skill-level">LEARNING</span></article>
+        <article class="skill-card panel reveal"><span class="skill-number">03</span><div class="skill-icon">Py</div><h3>Python</h3><p>基本文法や簡単なプログラムを学習。</p><span class="skill-level">BASICS</span></article>
+        <article class="skill-card panel reveal"><span class="skill-number">04</span><div class="skill-icon">⑂</div><h3>Git / GitHub</h3><p>コードの管理と作品公開に活用。</p><span class="skill-level">LEARNING</span></article>
+      </div>
+      <p class="small-note reveal">※実際の経験に合わせて、技術名やレベルを変更してください。</p>
+    </section>
+
+    <section class="section-wrap section-block" id="projects">
+      <div class="section-heading section-heading-row reveal"><div><p class="eyebrow">03 — SELECTED WORKS</p><h2>制作したもの<span class="accent">.</span></h2></div><span class="count-label">PROJECT ARCHIVE / <span id="project-count">03</span></span></div>
+      <div class="filter-bar reveal" role="group" aria-label="作品カテゴリで絞り込む">
+        <button class="filter-button active" data-filter="all">ALL <span>03</span></button>
+        <button class="filter-button" data-filter="web">WEB</button>
+        <button class="filter-button" data-filter="python">PYTHON</button>
+        <button class="filter-button" data-filter="idea">IDEA</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card panel reveal" data-category="web">
+          <a class="project-link" href="projects/project-template.html" aria-label="ポートフォリオサイトの詳細">
+            <div class="project-art art-web"><span class="art-tag">WEB / 001</span><div class="browser-art"><div class="browser-bar">● ● ●</div><div class="browser-content"><span></span><span></span><i></i></div></div><span class="art-symbol">↗</span></div>
+            <div class="project-info"><div class="project-meta"><span>WEB DEVELOPMENT</span><span>2026</span></div><h3>Portfolio Website</h3><p>自分の学習と作品を紹介するWebサイト。</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+          </a>
+        </article>
+        <article class="project-card panel reveal" data-category="python">
+          <a class="project-link" href="projects/project-template.html" aria-label="Pythonのミニゲームの詳細">
+            <div class="project-art art-python"><span class="art-tag">PYTHON / 002</span><div class="game-art"><span>?</span><span>!</span><span>?</span></div><span class="art-symbol">↗</span></div>
+            <div class="project-info"><div class="project-meta"><span>MINI GAME</span><span>2026</span></div><h3>Python Mini Game</h3><p>基本文法を使って作る小さなゲーム。</p><div class="tag-list"><span>Python</span><span>Logic</span></div></div>
+          </a>
+        </article>
+        <article class="project-card panel reveal" data-category="idea">
+          <a class="project-link" href="projects/project-template.html" aria-label="AIアプリのアイデアの詳細">
+            <div class="project-art art-ai"><span class="art-tag">CONCEPT / 003</span><div class="ai-orb"><span>AI</span></div><span class="art-symbol">↗</span></div>
+            <div class="project-info"><div class="project-meta"><span>APP CONCEPT</span><span>IN PROGRESS</span></div><h3>AI Support App</h3><p>AIを活用して日常の課題をサポートする構想。</p><div class="tag-list"><span>AI</span><span>Planning</span></div></div>
+          </a>
+        </article>
+      </div>
+      <p class="small-note reveal">作品カードはサンプルです。公開するときは、自分が実際に作ったものに置き換えてください。</p>
+    </section>
+
+    <section class="section-wrap section-block" id="log">
+      <div class="section-heading reveal"><p class="eyebrow">04 — DEV LOG</p><h2>成長の記録<span class="accent">.</span></h2></div>
+      <div class="log-list">
+        <article class="log-item reveal"><span class="log-date">2026 / 01</span><span class="log-dot"></span><div><h3>Web制作をスタート</h3><p>HTMLとCSSの基本を学び、ページの構造と見た目を作る。</p></div><span class="log-status">LEARNING</span></article>
+        <article class="log-item reveal"><span class="log-date">2026 / 02</span><span class="log-dot"></span><div><h3>JavaScriptに挑戦</h3><p>ボタン操作やアニメーションなど、ページに動きを加える。</p></div><span class="log-status">PLANNED</span></article>
+        <article class="log-item reveal"><span class="log-date">NEXT</span><span class="log-dot"></span><div><h3>作品を追加して改善</h3><p>制作物が増えたら、説明や見せ方もアップデートする。</p></div><span class="log-status">UP NEXT</span></article>
+      </div>
+      <p class="small-note reveal">※日付や記録はサンプルです。実際の学習内容に合わせて編集してください。</p>
+    </section>
+
+    <section class="contact section-wrap reveal" id="contact">
+      <p class="eyebrow">05 — KEEP IN TOUCH</p>
+      <h2>次のアイデアを、<br><span class="accent">形にしよう。</span></h2>
+      <p>新しい制作物や学習記録を、これからも追加していきます。</p>
+      <a class="button button-primary" href="https://github.com/" target="_blank" rel="noreferrer">GitHubを見る <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="logo" href="#home">RYO<span class="accent">.DEV</span></a><span>DESIGNED & BUILT WITH CURIOSITY.</span><a href="#home">BACK TO TOP ↑</a></footer>
+</body>
+</html>
