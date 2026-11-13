@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easys | RYO.DEV</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .detail{padding-top:90px;padding-bottom:100px;max-width:980px}
+    .detail h1{font-size:clamp(42px,7vw,72px);margin-bottom:20px}
+    .detail-lead{font-size:17px;color:var(--muted);max-width:650px}
+    .story-grid,.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+    .detail-panel,.feature-card{padding:24px}
+    .section-tag,.feature-number{margin:0 0 12px;color:var(--accent);font:10px var(--mono);letter-spacing:.1em}
+    .detail-panel h2,.feature-card h3{margin:0 0 10px;font-size:18px;line-height:1.5}
+    .detail-panel p:last-child,.feature-card p:last-child{margin:0;color:var(--muted);font-size:13px}
+    .detail-section{margin-top:64px}
+    .detail-section-title{margin:0;font-size:clamp(25px,4vw,34px);letter-spacing:-.04em}
+    .feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px}
+    .feature-number{font-size:11px}
+    .design-note{margin-top:16px;padding:25px}
+    .design-note h3{margin:0 0 10px;font-size:20px}
+    .design-note p:last-child{margin:0;color:var(--muted);font-size:14px}
+    .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:42px}
+    .gallery-item{margin:0;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+    .gallery-item img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+    .gallery-item figcaption{padding:15px 18px;font-size:13px;font-weight:700}
+    .gallery-step{display:block;margin-bottom:4px;color:var(--accent);font:10px var(--mono);letter-spacing:.08em}
+    .back-link{display:inline-block;margin-top:32px;color:var(--accent);font:12px var(--mono)}
+    @media(max-width:700px){.feature-grid{grid-template-columns:1fr}}
+    @media(max-width:640px){.detail{padding-top:65px}.story-grid,.gallery{grid-template-columns:1fr;gap:14px}.detail-section{margin-top:48px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="../index.html"><span class="logo-mark">R</span> RYO<span class="accent">.DEV</span></a>
+    <nav class="nav"><a href="../index.html#projects">PROJECTS</a><a href="../index.html#about">ABOUT</a></nav>
+  </header>
+  <main class="section-wrap detail">
+    <p class="eyebrow">PROJECT / 001 — WEB APP</p>
+    <h1>easys<span class="accent">.</span></h1>
+    <p class="detail-lead">食べた料理から摂取した栄養素をAIで分析し、年齢や性別に応じて不足している栄養素をひと目で確認できるアプリです。</p>
+
+    <div class="story-grid">
+      <section class="detail-panel panel">
+        <p class="section-tag">01 / BACKGROUND</p>
+        <h2>企画のきっかけ</h2>
+        <p>学校でのハッカソンをきっかけに、忙しい毎日の中でも食事の栄養を把握しやすくするアプリを企画しました。</p>
+      </section>
+      <section class="detail-panel panel">
+        <p class="section-tag">02 / FOR</p>
+        <h2>忙しい毎日の中でも</h2>
+        <p>一人暮らしの人や、家事・仕事などで忙しく、栄養バランスを考える時間を取りにくい人を想定しています。</p>
+      </section>
+    </div>
+
+    <section class="detail-section" aria-labelledby="features-title">
+      <p class="section-tag">03 / FEATURES</p>
+      <h2 class="detail-section-title" id="features-title">Easysでできること<span class="accent">.</span></h2>
+      <div class="feature-grid">
+        <article class="feature-card panel">
+          <p class="feature-number">01</p>
+          <h3>食べた料理を入力</h3>
+          <p>食べた料理を入力すると、AIが摂取した栄養素を分析します。</p>
+        </article>
+        <article class="feature-card panel">
+          <p class="feature-number">02</p>
+          <h3>不足している栄養素を確認</h3>
+          <p>年齢や性別に応じて、摂取した栄養素と不足している栄養素を確認できます。</p>
+        </article>
+        <article class="feature-card panel">
+          <p class="feature-number">03</p>
+          <h3>幅広い栄養素を表示</h3>
+          <p>できるだけ多くの種類の栄養素を一覧で見られるようにしています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="screens-title">
+      <p class="section-tag">04 / SCREENS</p>
+      <h2 class="detail-section-title" id="screens-title">アプリの画面<span class="accent">.</span></h2>
+      <div class="gallery" aria-label="Easysの画面">
+        <figure class="gallery-item">
+          <img src="../assets/easys/start.png" alt="ユーザー名、年齢、性別を入力するユーザー登録画面" loading="lazy">
+          <figcaption><span class="gallery-step">01 / START</span>ユーザー登録</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/easys/omurais.png" alt="オムライスの栄養素を表示する料理検索画面" loading="lazy">
+          <figcaption><span class="gallery-step">02 / RECIPE</span>料理検索と栄養表示</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/easys/syokuzai.png" alt="オムライスに使う材料と分量の一覧" loading="lazy">
+          <figcaption><span class="gallery-step">03 / INGREDIENTS</span>使用材料と分量</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="../assets/easys/eiyo.png" alt="タンパク質やビタミンなどの栄養素一覧" loading="lazy">
+          <figcaption><span class="gallery-step">04 / NUTRIENTS</span>栄養素一覧</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="design-title">
+      <p class="section-tag">05 / DESIGN</p>
+      <h2 class="detail-section-title" id="design-title">工夫したところ<span class="accent">.</span></h2>
+      <div class="design-note panel">
+        <h3>栄養素を、ひと目で把握できるように。</h3>
+        <p>できるだけ多くの種類の栄養素を表示し、食事の状態をひと目で理解できる画面を目指しました。デザインにも力を入れ、必要な情報を見つけやすくすることを意識しました。</p>
+      </div>
+    </section>
+
+    <div class="story-grid">
+      <section class="detail-panel panel">
+        <p class="section-tag">06 / CHALLENGE</p>
+        <h2>AI機能の導入</h2>
+        <p>AIをアプリに取り入れることに挑戦しました。利用に制限があるため、今後も試行錯誤しながら改善していきたいです。</p>
+      </section>
+      <section class="detail-panel panel">
+        <p class="section-tag">07 / LEARNING</p>
+        <h2>制作を通して学んだこと</h2>
+        <p>一つのアプリを作り上げるには、想像していた以上に多くのことを考える必要があると実感しました。</p>
+      </section>
+    </div>
+    <a class="back-link" href="../index.html#projects">← BACK TO PROJECTS</a>
+  </main>
+</body>
+</html>
