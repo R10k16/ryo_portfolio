@@ -72,3 +72,14 @@ nav.querySelectorAll("a").forEach((link) => {
     menuToggle.textContent = "☰";
   });
 });
+
+// ダーク・ライトテーマの切り替え
+const themeToggle = document.querySelector(".theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+  const isLight = document.documentElement.dataset.theme !== "light";
+  document.documentElement.dataset.theme = isLight ? "light" : "dark";
+  themeToggle.setAttribute("aria-pressed", String(isLight));
+  themeToggle.setAttribute("aria-label", isLight ? "ダークテーマに切り替える" : "ライトテーマに切り替える");
+  themeToggle.textContent = isLight ? "☾" : "☼";
+});
