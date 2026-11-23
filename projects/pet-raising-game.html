@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ペット育成ゲーム | RYO.DEV</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .detail{padding-top:90px;padding-bottom:100px;max-width:900px}
+    .detail h1{font-size:clamp(38px,6vw,64px);margin-bottom:20px}
+    .detail-lead{font-size:17px;color:var(--muted);max-width:760px}
+    .detail-section{margin-top:54px}
+    .detail-section h2{margin:0 0 18px;font-size:clamp(24px,4vw,32px);letter-spacing:-.04em}
+    .detail-grid,.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .detail-card,.action-card{padding:22px}
+    .detail-card h3,.action-card h3{margin:0 0 8px;font-size:16px}
+    .detail-card p,.action-card p{margin:0;color:var(--muted);font-size:13px}
+    .section-tag{margin:0 0 10px;color:var(--accent);font:10px var(--mono);letter-spacing:.1em}
+    .action-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .action-card .action-number{font:18px var(--mono);color:var(--accent);margin-bottom:10px}
+    .action-card h3{font-size:14px}
+    .note-panel{padding:24px;margin-top:14px}
+    .note-panel p{margin:0;color:var(--muted);font-size:14px}
+    .note-panel p+p{margin-top:12px}
+    .back-link{display:inline-block;margin-top:32px;color:var(--accent);font:12px var(--mono)}
+    @media(max-width:700px){.action-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.detail{padding-top:65px}.detail-grid,.action-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="../index.html"><span class="logo-mark">R</span> RYO<span class="accent">.DEV</span></a>
+    <nav class="nav"><a href="../index.html#projects">PROJECTS</a><a href="../index.html#about">ABOUT</a></nav>
+  </header>
+  <main class="section-wrap detail">
+    <p class="eyebrow">PROJECT / 002 — PYTHON GAME</p>
+    <h1>ペット育成ゲーム<span class="accent">.</span></h1>
+    <p class="detail-lead">ペットに名前をつけ、ご飯をあげたり、一緒に遊んだり、休ませたりしながら成長を見守るテキストゲームです。行動によって満腹度や元気、経験値が変化します。</p>
+
+    <section class="detail-section" aria-labelledby="overview-title">
+      <p class="section-tag">01 / OVERVIEW</p>
+      <h2 id="overview-title">ゲームの概要<span class="accent">.</span></h2>
+      <div class="detail-grid">
+        <article class="detail-card panel">
+          <h3>ペットの状態を管理</h3>
+          <p>名前、レベル、経験値、満腹度、元気を表示。行動するたびに時間が進み、満腹度と元気が少しずつ減ります。</p>
+        </article>
+        <article class="detail-card panel">
+          <h3>行動して育てる</h3>
+          <p>ご飯や遊びで経験値をため、100に達するとレベルアップ。満腹度または元気が0になるとゲームオーバーです。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="actions-title">
+      <p class="section-tag">02 / HOW TO PLAY</p>
+      <h2 id="actions-title">遊び方<span class="accent">.</span></h2>
+      <div class="action-grid">
+        <article class="action-card panel">
+          <p class="action-number">01</p>
+          <h3>ご飯をあげる</h3>
+          <p>満腹度が20回復し、経験値を10獲得します。</p>
+        </article>
+        <article class="action-card panel">
+          <p class="action-number">02</p>
+          <h3>遊ぶ</h3>
+          <p>元気が10以上あると遊べます。元気を10使い、経験値を20獲得します。</p>
+        </article>
+        <article class="action-card panel">
+          <p class="action-number">03</p>
+          <h3>寝かせる</h3>
+          <p>元気が30回復します。</p>
+        </article>
+        <article class="action-card panel">
+          <p class="action-number">04</p>
+          <h3>ゲームを終了</h3>
+          <p>メニューからいつでも終了できます。</p>
+        </article>
+      </div>
+      <div class="note-panel panel">
+        <p>ペットの名前を入力したあと、画面に表示されるメニューから数字を選んで操作します。Jupyterではセルを実行して遊びます。行動のあとには時間が進み、満腹度と元気がそれぞれ5減ります。</p>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="implementation-title">
+      <p class="section-tag">03 / WHAT I LEARNED</p>
+      <h2 id="implementation-title">制作で取り組んだこと<span class="accent">.</span></h2>
+      <div class="detail-grid">
+        <article class="detail-card panel">
+          <h3>クラスで状態をまとめる</h3>
+          <p>Petクラスを作り、名前やレベル、経験値、満腹度、元気をひとつにまとめて管理しました。def関数やif文も使っています。</p>
+        </article>
+        <article class="detail-card panel">
+          <h3>レベルアップの処理</h3>
+          <p>経験値が100に達したときにレベルを上げ、経験値を差し引く処理に苦労しました。何度も実行して動きを確かめました。</p>
+        </article>
+      </div>
+      <div class="note-panel panel">
+        <p>前の行動結果を画面に残し、ペットの成長を振り返りながら遊べるようにしました。絵文字も使い、文字だけのゲームが楽しく見えるよう工夫しています。</p>
+        <p>制作時間：約6時間</p>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="next-title">
+      <p class="section-tag">04 / NEXT STEP</p>
+      <h2 id="next-title">これからの改善<span class="accent">.</span></h2>
+      <div class="note-panel panel">
+        <p>今後はペットの画像を表示したり、レベルアップに合わせて進化したりする機能を追加してみたいです。</p>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="source-title">
+      <p class="section-tag">05 / SOURCE</p>
+      <h2 id="source-title">コードを見る<span class="accent">.</span></h2>
+      <a class="button button-primary" href="https://github.com/R10k16/pet-raising-game" target="_blank" rel="noopener noreferrer">GitHubでコードを見る <span>↗</span></a>
+    </section>
+
+    <a class="back-link" href="../index.html#projects">← BACK TO PROJECTS</a>
+  </main>
+</body>
+</html>
