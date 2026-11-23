@@ -8,6 +8,7 @@
 - `script.js` — スクロール表示、進捗バー、作品フィルター、スマホメニュー、テーマ切り替え
 - `projects/easys.html` — Easys の作品紹介ページ
 - `projects/pet-raising-game.html` — ペット育成ゲームの作品紹介ページ
+- `projects/portfolio.html` — ポートフォリオサイトの作品紹介ページ
 - `projects/project-template.html` — 作品詳細ページのテンプレート
 - `assets/easys/` — Easys の画面画像
 

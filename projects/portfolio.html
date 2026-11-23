@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RYO PORTFOLIO | RYO.DEV</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .detail{padding-top:90px;padding-bottom:100px;max-width:900px}
+    .detail h1{font-size:clamp(38px,6vw,64px);margin-bottom:20px}
+    .detail-lead{font-size:17px;color:var(--muted);max-width:760px}
+    .detail-section{margin-top:54px}
+    .detail-section h2{margin:0 0 18px;font-size:clamp(24px,4vw,32px);letter-spacing:-.04em}
+    .section-tag{margin:0 0 10px;color:var(--accent);font:10px var(--mono);letter-spacing:.1em}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .feature-card,.detail-card{padding:22px}
+    .feature-card h3,.detail-card h3{margin:0 0 8px;font-size:16px}
+    .feature-card p,.detail-card p{margin:0;color:var(--muted);font-size:13px}
+    .feature-number{margin:0 0 10px;font:18px var(--mono);color:var(--accent)}
+    .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .source-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .back-link{display:inline-block;margin-top:32px;color:var(--accent);font:12px var(--mono)}
+    @media(max-width:700px){.feature-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.detail{padding-top:65px}.detail-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="../index.html"><span class="logo-mark">R</span> RYO<span class="accent">.DEV</span></a>
+    <nav class="nav"><a href="../index.html#projects">PROJECTS</a><a href="../index.html#about">ABOUT</a></nav>
+  </header>
+  <main class="section-wrap detail">
+    <p class="eyebrow">PROJECT / 003 — PORTFOLIO</p>
+    <h1>RYO PORTFOLIO<span class="accent">.</span></h1>
+    <p class="detail-lead">自分の自己紹介、学んでいる技術、制作した作品をひとつのWebサイトにまとめたポートフォリオです。見る人が作品をスムーズに確認できる構成を目指しました。</p>
+
+    <section class="detail-section" aria-labelledby="features-title">
+      <p class="section-tag">01 / FEATURES</p>
+      <h2 id="features-title">実装した機能<span class="accent">.</span></h2>
+      <div class="feature-grid">
+        <article class="feature-card panel">
+          <p class="feature-number">01</p>
+          <h3>レスポンシブ対応</h3>
+          <p>PCやスマートフォンでも見やすいレイアウトになるよう、画面幅に合わせて表示を変えています。</p>
+        </article>
+        <article class="feature-card panel">
+          <p class="feature-number">02</p>
+          <h3>作品フィルター</h3>
+          <p>作品カテゴリを選択すると、一覧の表示を絞り込めます。</p>
+        </article>
+        <article class="feature-card panel">
+          <p class="feature-number">03</p>
+          <h3>テーマ切り替え</h3>
+          <p>ライトテーマとダークテーマを切り替えられるボタンを実装しています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="tech-title">
+      <p class="section-tag">02 / TECHNOLOGY</p>
+      <h2 id="tech-title">使用技術<span class="accent">.</span></h2>
+      <div class="detail-grid">
+        <article class="detail-card panel"><h3>HTML / CSS</h3><p>サイトの構造とデザイン、レスポンシブレイアウトを作成しました。</p></article>
+        <article class="detail-card panel"><h3>JavaScript</h3><p>作品フィルター、スマートフォンメニュー、テーマ切り替え、スクロール表示を実装しました。</p></article>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="source-title">
+      <p class="section-tag">03 / SOURCE</p>
+      <h2 id="source-title">公開ページ<span class="accent">.</span></h2>
+      <div class="source-actions">
+        <a class="button button-primary" href="https://r10k16.github.io/ryo_portfolio/" target="_blank" rel="noopener noreferrer">公開サイトを見る <span>↗</span></a>
+        <a class="button button-ghost" href="https://github.com/R10k16/ryo_portfolio" target="_blank" rel="noopener noreferrer">GitHubを見る <span>↗</span></a>
+      </div>
+    </section>
+
+    <a class="back-link" href="../index.html#projects">← BACK TO PROJECTS</a>
+  </main>
+</body>
+</html>

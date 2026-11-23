@@ -53,6 +53,8 @@ filterButtons.forEach((button) => {
   });
 });
 
+filterProjects("all");
+
 // スマホ用ナビゲーション
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
